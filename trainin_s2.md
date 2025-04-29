@@ -25,3 +25,22 @@ for i in range(n):
         contador += 1
 print(f"la cantidad de triangulos con superficie mayor a 12 son: {contador}")
 ```
+Puntos en el plano cartesiano
+Escribir un programa que pida ingresar coordenadas (x, y) y determine cuántos puntos se encuentran en cada cuadrante (I, II, III, IV).
+Nota: Al inicio, el programa debe solicitar la cantidad de puntos a procesar.
+```python
+n = int(input("cuantos puntos quiere ingresar: "))
+contador1 = contador2 = contador3 = contador4 = 0
+for i in range(n):
+    x = float(input(f"ingresa las coordenadas x del punto {i+1} "))
+    y = float(input(f"ingrese las coordenadas y del punto {i+1} "))
+    if x > 0 and y > 0:
+        contador1 += 1
+    elif x < 0 and y > 0:
+        contador2 += 1
+    elif x < 0 and y < 0:
+        contador3 += 1
+    elif x > 0 and y < 0:
+        contador4 += 1
+print(f"la cantidad de puntos en cada cuadrante son: cuadrante 1 = {contador1},cuadrante 2 = {contador2}, cuadrante 3 = {contador3},cuadrante 4 = {contador4} ")
+```
